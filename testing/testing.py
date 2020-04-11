@@ -17,7 +17,7 @@ class StackedTimer(object):
 
     def __exit__(self, type, value, traceback):
         if self.name:
-            print("{} completed in {}s".format(self.name,round(self.duration(), 3):.3g))
+            print("{} completed in {:.3g}s".format(self.name,round(self.duration(), 3)))
 
     def duration(self):
         return time.perf_counter() - self.start_time
